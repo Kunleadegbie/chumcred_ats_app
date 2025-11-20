@@ -76,7 +76,7 @@ def login_page():
         st.session_state.role = user["role"]
 
         st.success("Login successful! Redirecting...")
-        st.experimental_rerun()
+        st.rerun()
 
 
 # ---------------------------------------------------
@@ -118,12 +118,12 @@ def admin_dashboard():
         if st.button("Block User"):
             block_user(selected_user)
             st.success("User blocked!")
-            st.experimental_rerun()
+            st.rerun()
 
         if st.button("Unblock User"):
             unblock_user(selected_user)
             st.success("User unblocked!")
-            st.experimental_rerun()
+            st.rerun()
 
         newp = st.text_input("New Password")
         if st.button("Reset Password"):
@@ -133,7 +133,7 @@ def admin_dashboard():
     # LOGOUT
     elif menu == "Logout":
         st.session_state.logged_in = False
-        st.experimental_rerun()
+        st.rerun()
 
 
 # ---------------------------------------------------
@@ -148,7 +148,7 @@ def user_dashboard():
 
     elif menu == "Logout":
         st.session_state.logged_in = False
-        st.experimental_rerun()
+        st.rerun()
 
 
 # ---------------------------------------------------
