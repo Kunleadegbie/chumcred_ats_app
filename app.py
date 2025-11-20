@@ -18,6 +18,15 @@ from helpers.user_auth import (
 # Initialize database
 init_db()
 
+# Force unblock admin account (repair)
+import sqlite3
+conn = sqlite3.connect("users.db")
+c = conn.cursor()
+c.execute("UPDATE users SET status='active' WHERE username='admin'")
+conn.commit()
+conn.close()
+
+
 # ---------------------------------------------
 # STREAMLIT PAGE CONFIGURATION
 # ---------------------------------------------
