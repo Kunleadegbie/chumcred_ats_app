@@ -251,3 +251,16 @@ else:
         admin_dashboard()
     else:
         user_dashboard()
+
+
+
+
+st.write("**Contact customer support via email: chumcred@gmail.com or ‪+2347040000063‬ to set your username and password. Terms and conditions apply.**")
+
+
+
+
+st.write("**Powered by Chumcred Limited**")
+
+# END APP
+
