@@ -1,7 +1,9 @@
+
 streamlit
 pandas
-pdfplumber
 python-docx
+openpyxl
 scikit-learn
 numpy
+pdfplumber
 supabase
